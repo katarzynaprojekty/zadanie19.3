@@ -9,39 +9,39 @@ const EDIT_COMMENT = 'EDIT_COMMENT',
 function addComment(text) {
   return {
     type: ADD_COMMENT,
-    text: 'content',
+    text: text,
     id: uuid.v4()
   }
 }
 
-function removeComment(id) {
+function removeComment(commentId) {
   return {
     type: REMOVE_COMMENT,
-    id: comment.id
+    id: commentId
   }
 }
 
-function editComment(id, text) {
+function editComment(commentId, text) {
   return {
     type: EDIT_COMMENT,
-    text,
-    id: comment.id
+    text: text,
+    id: commentId
   }
 }
 
-function thumbUpComment(value) {
+function thumbUpComment(commentId) {
   return {
-    type: THUMB_UP_COMMENT.
+    type: THUMB_UP_COMMENT,
     value: +1,
-    id: comment.id
+    id: commentId
   }
 }
 
-function thumbDownComment(value) {
+function thumbDownComment(commentId) {
   return {
     type: THUMB_DOWN_COMMENT,
     value: -1,
-    id: comment.id
+    id: commentId
   }
 }
 
